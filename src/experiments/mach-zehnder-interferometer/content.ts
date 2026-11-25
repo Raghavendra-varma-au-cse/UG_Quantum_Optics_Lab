@@ -2147,14 +2147,15 @@ const content: ExperimentContent = {
         "The translation stage is scanned over several fringe periods, but both detector signals remain constant; one port is always bright and the other always dark. What is the most likely cause?",
       options: [
         "The laser coherence length is too long.",
-        "The two beams do not overlap at BS2, or one arm is blocked or badly misaligned.",
+        "The two beams do not overlap at BS2, one arm is blocked, or one output is clipped before its detector.",
         "The photodiode bandwidth is too low.",
         "The phase scan is too slow."
       ],
       answerIndex: 1,
-      answer: "A phase-independent, complementary output means that only one arm is contributing at BS2. The other path is blocked, clipped or spatially missing the overlap region.",
+      answer:
+        "A phase-independent output that does not exchange power between the ports means the two arms are not both contributing to the same spatial mode at BS2. Check the beam blocks first, then the overlap and any clipping at the output.",
       explanation:
-        "Check the beam blocks first, then the irises and the two spots at BS2. If both arms are present but displaced, the output is the sum of two non-interfering spots rather than a single overlapping mode.",
+        "If both arms were present and overlapping, scanning the stage would change the relative phase and transfer power between D0 and D1. Constant complementary outputs point to a missing or clipped beam, not to a detector bandwidth problem.",
       marks: 3
     },
     {

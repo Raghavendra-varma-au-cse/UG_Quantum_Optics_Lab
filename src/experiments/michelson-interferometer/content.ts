@@ -2225,9 +2225,9 @@ const content: ExperimentContent = {
       difficulty: 2,
       topic: "Order-of-magnitude estimate",
       prompt:
-        "Estimate how many fringes you expect when a 0.300 m brass rod (α ≈ 19 × 10⁻⁶ K⁻¹) is heated by 15.0 K in one arm of a Michelson interferometer at 633 nm. State your assumptions and give the answer to one significant figure.",
+        "Estimate how many fringes you expect when a 0.300 m brass rod (α ≈ 19 × 10⁻⁶ K⁻¹) is heated by 15.0 K in one arm of a Michelson interferometer at 633 nm. State your assumptions and give the answer to two significant figures.",
       answer:
-        "The rod expands by ΔL = αLΔT = (19 × 10⁻⁶)(0.300)(15.0) = 8.55 × 10⁻⁵ m. The mirror moves by that amount, so the round-trip optical path changes by 2ΔL = 1.71 × 10⁻⁴ m. The number of fringes is N = 2ΔL/λ = 1.71 × 10⁻⁴/633 × 10⁻⁹ ≈ 2.7 × 10², i.e. about 300 fringes (270 to two figures). This assumes the rod is free to expand, the mirror follows the rod without slip, the mount and bench expansion are negligible, and the rod reaches a uniform temperature. A real measurement would also include the expansion of the mount, which is why the result is an estimate rather than a calibration.",
+        "The rod expands by ΔL = αLΔT = (19 × 10⁻⁶)(0.300)(15.0) = 8.55 × 10⁻⁵ m. The mirror moves by that amount, so the round-trip optical path changes by 2ΔL = 1.71 × 10⁻⁴ m. The number of fringes is N = 2ΔL/λ = 1.71 × 10⁻⁴/633 × 10⁻⁹ ≈ 2.7 × 10², i.e. about 270 fringes. This assumes the rod is free to expand, the mirror follows the rod without slip, the mount and bench expansion are negligible, and the rod reaches a uniform temperature. A real measurement would also include the expansion of the mount, which is why the result is an estimate rather than a calibration.",
       marks: 2
     },
     {

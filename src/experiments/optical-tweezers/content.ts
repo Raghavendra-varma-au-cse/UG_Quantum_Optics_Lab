@@ -2134,7 +2134,7 @@ export const opticalTweezers: ExperimentContent = {
       difficulty: 2,
       topic: "Objective choice",
       prompt:
-        "You must choose between two objectives for a 1064 nm trap: NA 0.6 (dry, long working distance) and NA 1.3 (oil immersion, short working distance). The bead is 0.4 µm in diameter and the total laser power is fixed. Which objective gives the stronger trap, and why?",
+        "You must choose between two objectives for a 1064 nm trap: NA 0.6 (dry, long working distance) and NA 1.3 (oil immersion, short working distance). The bead is 0.4 µm in diameter and the total laser power is fixed. Which objective gives the stronger trap, why, and how should the input beam be conditioned for it?",
       options: [
         "NA 0.6, because the longer working distance reduces spherical aberration and therefore improves the gradient.",
         "NA 1.3, because the waist is roughly halved, so the stiffness rises steeply at fixed power even though the axial working distance shrinks.",
@@ -2143,7 +2143,7 @@ export const opticalTweezers: ExperimentContent = {
       ],
       answerIndex: 1,
       answer:
-        "NA 1.3. At 1064 nm the diffraction-limited waists are approximately w₀ = 0.61λ/NA ≈ 1.08 µm for NA 0.6 and 0.50 µm for NA 1.3. At fixed power the peak intensity scales as 1/w₀², so the transverse stiffness k ∝ 1/w₀⁴ increases by roughly (1.08/0.50)⁴ ≈ 22, and the trap depth ∝ 1/w₀² increases by roughly 4.7. The higher-NA objective is the better choice provided the sample can tolerate oil immersion, the short working distance and the extra aberration from focusing through the coverslip. A beam that does not fill the high-NA pupil, or a badly corrected coverslip, can erase much of the theoretical gain.",
+        "NA 1.3. At 1064 nm the diffraction-limited waists are approximately w₀ = 0.61λ/NA ≈ 1.08 µm for NA 0.6 and 0.50 µm for NA 1.3. At fixed power the peak intensity scales as 1/w₀², so the transverse stiffness k ∝ 1/w₀⁴ increases by roughly (1.08/0.50)⁴ ≈ 22, and the trap depth ∝ 1/w₀² increases by roughly 4.7. Expand the input beam so that it overfills the objective back aperture without clipping: underfilling wastes NA and enlarges the focus, while overfilling far beyond the pupil throws away power and can heat the mount. The higher-NA objective is the better choice provided the sample can tolerate oil immersion, the short working distance and the extra aberration from focusing through the coverslip; a badly corrected coverslip or an off-axis beam can erase much of the theoretical gain.",
       explanation:
         "The strong scaling is the point: at fixed power, halving the waist increases the intensity fourfold and the intensity gradient a further fourfold. The cost is practical, not fundamental: working distance, immersion and aberration control.",
       marks: 3

@@ -1864,7 +1864,7 @@ export const content: ExperimentContent = {
       difficulty: 3,
       topic: "Troubleshooting / conditional visibility",
       prompt:
-        "At θ = 90°, the gated + channel shows a weak fringe with V ≈ 0.2 instead of near 1. Which combination best explains the reduced visibility?",
+        "At θ = 90°, you see no clear conditional recovery — at best a weak fringe with V ≈ 0.2 in the gated + channel. Which combination best explains the reduced visibility?",
       options: [
         "An analyser zero offset, an incomplete or drifting phase scan, or a large accidental-coincidence fraction.",
         "The marker is exactly orthogonal and the two path intensities are balanced.",

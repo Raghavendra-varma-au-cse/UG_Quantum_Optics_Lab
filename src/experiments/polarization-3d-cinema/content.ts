@@ -733,9 +733,9 @@ const questions: Question[] = [
     prompt:
       "You have one linear polarizer and one quarter-wave plate, but no second wave plate. Can you determine the handedness of the circular light you generate? Explain what you can and cannot conclude, and what happens if you flip the plate.",
     answer:
-      "Put the polarizer first and the quarter-wave plate at 45° to its axis. A rotating linear analyser then reads a nearly constant intensity, which shows that the state is circular or unpolarized; it does not distinguish the two, and it cannot distinguish right from left because a linear analyser responds only to the linear projection. Determining handedness requires a circular analyser — a second quarter-wave plate plus a linear polarizer, or a known reference state — because only then do the two handednesses give different transmissions. Flipping the quarter-wave plate reverses the sign of its retardance relative to the propagation direction, so it swaps the handedness of the output; label the input face and keep the orientation fixed.",
+      "Put the polarizer first and the quarter-wave plate at 45° to its axis. A rotating linear analyser then reads a nearly constant intensity, which shows that the state is circular or unpolarized; it does not distinguish the two, and it cannot distinguish right from left because a linear analyser responds only to the linear projection. Determining handedness requires a circular analyser — a second quarter-wave plate at 45° followed by a linear polarizer, or a known reference state — because only then do the two handednesses give different transmissions. Turning the plate face-to-face (about an in-plane axis) mirrors its principal axes in the transverse plane, so the same input produces the opposite handedness; rotating it about the beam axis does not. Label the input face and keep the orientation fixed.",
     explanation:
-      "The flat analyser response is necessary but not sufficient for circular polarization. The handedness is the sign of S₃, and a linear analyser is blind to S₃. One wave plate can create a circular state but cannot, by itself, certify which circular state it is.",
+      "The flat analyser response is necessary but not sufficient for circular polarization. The handedness is the sign of S₃, and a linear analyser is blind to S₃. One wave plate can create a circular state but cannot, by itself, certify which circular state it is. Flipping the plate changes the geometry; it does not change the retardance magnitude.",
     marks: 5
   },
   {
@@ -2193,7 +2193,7 @@ const content: ExperimentContent = {
         }
       ],
       result: {
-        latex: "\\mathrm{XT}_{\\mathrm{linear}}(\\beta)=\\frac{(1+\\epsilon)-(1-\\epsilon)(1-p)\\cos2\\beta}{(1+\\epsilon)+(1-\\epsilon)(1-p)\\cos2\\beta},\\qquad \\mathrm{XT}_{\\mathrm{circ}}=\\frac{\\epsilon+\\tfrac12(1-\\epsilon)p}{1+\\epsilon}",
+        latex: "\\mathrm{XT}_{\\mathrm{linear}}(\\beta)=\\frac{(1+\\epsilon)-(1-\\epsilon)(1-p)\\cos2\\beta}{2(1+\\epsilon)},\\qquad \\mathrm{XT}_{\\mathrm{circ}}=\\frac{\\epsilon+\\tfrac12(1-\\epsilon)p}{1+\\epsilon}",
         text: "Head tilt enters linear stereo through cos 2β and is absent for circular stereo. Screen depolarization sets a floor that no glasses can remove. With ε = 10⁻³ and p = 0.02, the circular floor is about 1.1 % crosstalk."
       },
       assumptions: [

@@ -14,12 +14,52 @@ Zustand and IndexedDB.
 ```bash
 npm install
 npm run dev        # http://localhost:3000
-npm run build      # production build
+npm run build      # static export to out/ (also runs the scientific tests in CI)
+npm run preview    # serve out/ locally
 npm run typecheck  # tsc --noEmit
 npm run test       # vitest (shared physics + experiment model tests)
 ```
 
 Node 20.9+ is required by Next 16.
+
+---
+
+## Live site and deployment
+
+The site is a **fully static export** (`output: "export"`), specifically so it can be hosted on GitHub Pages. Every
+experiment mode is a prerendered route:
+
+```
+/experiments/<slug>/              Understand
+/experiments/<slug>/experiment/   Bench
+/experiments/<slug>/master/       Questions and viva
+/experiments/<slug>/practical/    Measurements and report
+```
+
+A GitHub Actions workflow (`.github/workflows/deploy.yml`) runs the tests, builds with the repository base path, and
+publishes `out/` to Pages. To enable it:
+
+1. Create a **public** repository and push this project to `main`.
+2. In **Settings → Pages**, set **Source** to **GitHub Actions**.
+3. Run the workflow (or push to `main`). The site appears at
+   `https://<owner>.github.io/<repo>/` for a project site, or `https://<owner>.github.io/` for a user site.
+
+For a project site the workflow sets `NEXT_PUBLIC_BASE_PATH=/<repo>` automatically. For a user/organisation site
+(`<owner>.github.io`) it uses an empty base path. Local builds default to no base path.
+
+### Publish from the command line
+
+```bash
+gh auth login
+gh repo create <repo-name> --public --source=. --remote=origin --push
+```
+
+The workflow needs **Settings → Actions → General → Workflow permissions: Read and write** only if you later choose a
+branch-based deployment; the included Pages workflow uses the official Pages actions and `pages: write` permission.
+
+> The live URL, repository badges and clone command are updated after the repository is created. This file deliberately
+> does not invent an owner or a deployment URL.
+
 
 ---
 
@@ -51,7 +91,7 @@ The 3D bench is a schematic arrangement, not a CAD model or a measured layout.
 src/
   app/
     page.tsx                     Laboratory overview (live hero instrument, index, progression)
-    experiments/                 Directory + [slug] (Understand / Experiment / Master / Practical)
+    experiments/                 Directory + [slug] Understand, /experiment, /master, /practical
     components/                  Searchable optical & optomechanical library + detail
     hardware/                    Inventory, verification status, per-experiment configuration
     instruments/                 Instrumentation reference + simulated oscilloscope
