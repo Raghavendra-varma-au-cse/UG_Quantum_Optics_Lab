@@ -81,6 +81,44 @@ export function SiteFooter() {
             Educational use · v1.0
           </p>
         </div>
+
+        <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-line pt-4">
+          <a
+            href="https://github.com/Raghavendra-varma-au-cse/UG_Quantum_Optics_Lab"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[0.6rem] uppercase tracking-[0.08em] text-muted hover:text-ink"
+          >
+            Source on GitHub ↗
+          </a>
+          <a
+            href="https://raghavendra-varma-au-cse.github.io/UG_Quantum_Optics_Lab/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[0.6rem] uppercase tracking-[0.08em] text-muted hover:text-ink"
+          >
+            Live laboratory ↗
+          </a>
+          <a
+            href="https://github.com/Raghavendra-varma-au-cse/UG_Quantum_Optics_Lab/actions/workflows/deploy.yml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[0.6rem] uppercase tracking-[0.08em] text-muted hover:text-ink"
+          >
+            Deployment ↗
+          </a>
+          <Link href="/validation" className="font-mono text-[0.6rem] uppercase tracking-[0.08em] text-muted hover:text-ink">
+            Validation
+          </Link>
+          <a
+            href="https://github.com/Raghavendra-varma-au-cse/UG_Quantum_Optics_Lab/blob/main/LICENSE"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[0.6rem] uppercase tracking-[0.08em] text-muted hover:text-ink md:ml-auto"
+          >
+            MIT licence
+          </a>
+        </div>
       </div>
     </footer>
   );

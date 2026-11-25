@@ -1,7 +1,7 @@
 # Quantum Optics Laboratory
 
 [![Deploy to GitHub Pages](https://github.com/Raghavendra-varma-au-cse/UG_Quantum_Optics_Lab/actions/workflows/deploy.yml/badge.svg)](https://github.com/Raghavendra-varma-au-cse/UG_Quantum_Optics_Lab/actions/workflows/deploy.yml)
-[![Live laboratory](https://img.shields.io/badge/live-laboratory-14524A)](https://Raghavendra-varma-au-cse.github.io/UG_Quantum_Optics_Lab/)
+[![Live laboratory](https://img.shields.io/badge/live-laboratory-14524A)](https://raghavendra-varma-au-cse.github.io/UG_Quantum_Optics_Lab/)
 
 An interactive undergraduate quantum optics laboratory: eight experiments, each with theory and derivations, a working
 numerical bench, real alignment procedure, measurement templates, uncertainty analysis, a viva-level question bank and
@@ -30,7 +30,7 @@ Node 20.9+ is required by Next 16.
 ## Live site and deployment
 
 **Repository:** <https://github.com/Raghavendra-varma-au-cse/UG_Quantum_Optics_Lab>  
-**Live laboratory:** <https://Raghavendra-varma-au-cse.github.io/UG_Quantum_Optics_Lab/>
+**Live laboratory:** <https://raghavendra-varma-au-cse.github.io/UG_Quantum_Optics_Lab/>
 
 The site is a **fully static export** (`output: "export"`), specifically so it can be hosted on GitHub Pages. Every
 experiment mode is a prerendered route:
@@ -148,6 +148,11 @@ src/
 ---
 
 ## The eight experiments
+
+386 explained questions across the eight modules. The quiz has a **practice** mode with immediate feedback, a **timed**
+paper, a **viva** mode that hides everything until self-assessment, and a **study** mode where every model answer is
+visible. Finishing any scored mode opens a full answer review: your answer, the correct/model answer and the reasoning,
+question by question.
 
 | # | Experiment | Evidence label | Core model |
 | --- | --- | --- | --- |
