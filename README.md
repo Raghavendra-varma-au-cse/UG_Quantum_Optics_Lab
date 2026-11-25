@@ -1,5 +1,8 @@
 # Quantum Optics Laboratory
 
+[![Deploy to GitHub Pages](https://github.com/Raghavendra-varma-au-cse/UG_Quantum_Optics_Lab/actions/workflows/deploy.yml/badge.svg)](https://github.com/Raghavendra-varma-au-cse/UG_Quantum_Optics_Lab/actions/workflows/deploy.yml)
+[![Live laboratory](https://img.shields.io/badge/live-laboratory-14524A)](https://Raghavendra-varma-au-cse.github.io/UG_Quantum_Optics_Lab/)
+
 An interactive undergraduate quantum optics laboratory: eight experiments, each with theory and derivations, a working
 numerical bench, real alignment procedure, measurement templates, uncertainty analysis, a viva-level question bank and
 local-first progress.
@@ -26,6 +29,9 @@ Node 20.9+ is required by Next 16.
 
 ## Live site and deployment
 
+**Repository:** <https://github.com/Raghavendra-varma-au-cse/UG_Quantum_Optics_Lab>  
+**Live laboratory:** <https://Raghavendra-varma-au-cse.github.io/UG_Quantum_Optics_Lab/>
+
 The site is a **fully static export** (`output: "export"`), specifically so it can be hosted on GitHub Pages. Every
 experiment mode is a prerendered route:
 
@@ -44,8 +50,17 @@ publishes `out/` to Pages. To enable it:
 3. Run the workflow (or push to `main`). The site appears at
    `https://<owner>.github.io/<repo>/` for a project site, or `https://<owner>.github.io/` for a user site.
 
-For a project site the workflow sets `NEXT_PUBLIC_BASE_PATH=/<repo>` automatically. For a user/organisation site
-(`<owner>.github.io`) it uses an empty base path. Local builds default to no base path.
+For a project site the workflow sets `NEXT_PUBLIC_BASE_PATH=/UG_Quantum_Optics_Lab` automatically. For a user or
+organisation site (`<owner>.github.io`) it uses an empty base path. Local builds default to no base path.
+
+### Clone and run
+
+```bash
+git clone https://github.com/Raghavendra-varma-au-cse/UG_Quantum_Optics_Lab.git
+cd UG_Quantum_Optics_Lab
+npm ci
+npm run dev
+```
 
 ### Publish from the command line
 
@@ -54,11 +69,8 @@ gh auth login
 gh repo create <repo-name> --public --source=. --remote=origin --push
 ```
 
-The workflow needs **Settings → Actions → General → Workflow permissions: Read and write** only if you later choose a
-branch-based deployment; the included Pages workflow uses the official Pages actions and `pages: write` permission.
-
-> The live URL, repository badges and clone command are updated after the repository is created. This file deliberately
-> does not invent an owner or a deployment URL.
+The included workflow enables GitHub Pages on its first successful run, builds with the correct base path, and deploys
+`out/`. If the Pages site already exists, no manual setting is required.
 
 
 ---

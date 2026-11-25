@@ -2,6 +2,11 @@
   "name": "quantum-optics-lab",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://Raghavendra-varma-au-cse.github.io/UG_Quantum_Optics_Lab/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Raghavendra-varma-au-cse/UG_Quantum_Optics_Lab.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build && node scripts/postbuild.mjs",
