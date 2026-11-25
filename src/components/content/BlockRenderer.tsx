@@ -185,7 +185,7 @@ export function DerivationView({ derivation }: { derivation: Derivation }) {
         {derivation.steps.map((s, i) => (
           <li key={i} className="grid gap-1.5 px-4 py-3 sm:grid-cols-[26px_1fr] sm:gap-4">
             <span className="font-mono text-[0.62rem] text-muted">{String(i + 1).padStart(2, "0")}</span>
-            <div>
+            <div className="min-w-0">
               {s.label ? <p className="mb-1 font-mono text-[0.6rem] uppercase tracking-[0.08em] text-vermilion">{s.label}</p> : null}
               <p className="text-[0.8rem] leading-relaxed text-ink-2">{s.text}</p>
               {s.latex ? (
